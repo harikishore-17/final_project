@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Know Your Food</title>
+    <link rel="stylesheet" href="../static/styles/kyf.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../static/styles/navstyles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <div id="kyf-page" class="container">
+        <h2 class="heading">Know Your Food</h2>
+        <p>Enter the name of the food item to get nutritional details:</p>
+        <input type="text" id="food-item" placeholder="E.g., Biryani" />
+        <button id="search-btn">Search</button>
+
+        <!-- Loading Animation -->
+        <div id="loading" class="loading">Fetching data...</div>
+
+        <!-- Result Display -->
+        <div id="result" class="result"></div>
+
+        <!-- Fun Fact Section -->
+        <div class="fact-section">
+            <h3>Did you know?</h3>
+            <div class="fun-facts-container">
+                <div class="fun-fact">A small glass of Coke contains about 39g of sugar.</div>
+                <div class="fun-fact">An avocado has nearly 20 essential vitamins and minerals.</div>
+                <div class="fun-fact">A cup of cooked quinoa has around 8g of protein.</div>
+                <div class="fun-fact">Carrots are rich in beta-carotene, which your body converts into vitamin A.</div>
+                <div class="fun-fact">Bananas are a great source of potassium, helping maintain healthy blood pressure.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#loading').hide();
+
+            $('#search-btn').click(function() {
+                var foodItem = $('#food-item').val().trim();
+                if (!foodItem) {
+                    alert("Please enter a food item.");
+                    return;
+                }
+
+                $('#loading').show();
+                $('#result').empty();
+
+                $.getJSON('/kyf_details', { food: foodItem }, function(data) {
+                    $('#loading').hide();
+
+                    if (data.error) {
+                        $('#result').append(`<p>Error: ${data.error}</p>`);
+                        return;
+                    }
+
+                    try {
+                        const info = JSON.parse(data);
+                        console.log(data)
+                        $('#result').append(`
+                            <div class="food-info">
+                                <h3>${info.dish_name}</h3>
+                                <p>Serving Size: ${info.serving_size}</p>
+                                <p>Calories: ${info.nutritional_info.calories}</p>
+                                <p>Fat: ${info.nutritional_info.macronutrients.fat.total} </p>
+                                <p>Protein: ${info.nutritional_info.macronutrients.protein} </p>
+                                <p>Carbohydrates: ${info.nutritional_info.macronutrients.carbohydrates.total} </p>
+                                <p>Sodium: ${info.nutritional_info.other_nutrients.sodium} </p>
+                                <p>Cholesterol: ${info.nutritional_info.other_nutrients.cholesterol} </p>
+                                <p>Potassium: ${info.nutritional_info.other_nutrients.potassium} </p>
+                                <p>Calcium: ${info.nutritional_info.other_nutrients.calcium} </p>
+                                <p>Iron: ${info.nutritional_info.other_nutrients.iron} </p>
+                                <p>Note: ${info.note}</p>
+                            </div>
+                        `);
+                        $('.fact-section').addClass('moved-down');
+                    } catch (err) {
+                        $('#result').append('<p>Failed to parse nutritional information.</p>');
+                        console.error("Parsing error:", err);
+                    }
+                }).fail(function() {
+                    $('#loading').hide();
+                    $('#result').append('<p>Failed to fetch data. Please try again.</p>');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

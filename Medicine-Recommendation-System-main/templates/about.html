@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock %}
+{% block extra_css %}
+<link href="{{ url_for('static', filename='styles/aboutstyles.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<h1 class="main-heading">About Us</h1>
+<p>Welcome to the Medical Health Center, where health meets technology for a brighter, healthier future.</p>
+<h3>Our Vision</h3>
+<p>We envision a world where access to healthcare information is not just a luxury but a fundamental right...</p>
+<h3>Who We Are</h3>
+<p>We are a passionate team of healthcare professionals, data scientists, and technology enthusiasts...</p>
+<h3>Our Mission</h3>
+<p>Our mission is to provide you with a seamless and intuitive platform...</p>
+<h3>How We Do It</h3>
+<p>Our platform utilizes a robust machine learning model trained on a vast dataset...</p>
+<h3>Your Well-being, Our Priority</h3>
+<p>Your health is our top priority. We understand that navigating the complexities of healthcare...</p>
+<h3>Join Us on this Journey</h3>
+<p>We invite you to explore our platform, engage with our educational content, and take control of your health...</p>
+<p>Thank you for choosing Health Care Center as your trusted health companion...</p>
+{% endblock %}

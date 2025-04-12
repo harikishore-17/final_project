@@ -1,0 +1,41 @@
+/* blog.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h2 {
+    color: #0062cc;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    color: #004a99;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+ol li, ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.container:hover {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,76 @@
+body.bmi-page {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+.bmi-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bmi-container label,
+.bmi-container input,
+.bmi-container button {
+    display: block;
+    margin: 10px auto;
+    font-size: 16px;
+}
+
+.bmi-container input,
+.bmi-container button {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.bmi-container button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.bmi-container button:hover {
+    background-color: #0056b3;
+}
+
+.bmi-container .result {
+    margin-top: 20px;
+}
+
+.bmi-container h2,
+.bmi-container h3 {
+    color: #007bff;
+}
+.card {
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.card-text ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.card-text li {
+    margin: 0.5rem 0;
+}
+
+.card-text li::before {
+    content: "✔️ ";
+    margin-right: 5px;
+    color: green;
+}

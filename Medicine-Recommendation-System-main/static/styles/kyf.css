@@ -1,0 +1,157 @@
+/* KYF Page Styles */
+#kyf-page {
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: Arial, sans-serif;
+}
+
+#kyf-page .heading {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#kyf-page .loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#kyf-page .food-info {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 15px auto;
+    max-width: 500px;
+}
+
+#kyf-page .food-info p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+#kyf-page .fun-fact {
+    background-color: #ffd700;
+    color: #000;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#kyf-page .fun-fact:hover {
+    transform: translateY(-3px);
+}
+
+#kyf-page .result-container {
+    display: none;
+    margin-top: 20px;
+}
+
+#kyf-page .fun-facts-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#kyf-page input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#kyf-page button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#kyf-page button:hover {
+    background-color: #2980b9;
+}
+
+#kyf-page .card {
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+#kyf-page .card:hover {
+    transform: scale(1.02);
+}
+
+/* Loading Animation */
+#loading {
+    display: none;
+    margin: 20px 0;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Food Information */
+.food-info {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Fact Section */
+.fact-section {
+    margin-top: 20px;
+    transition: all 0.5s ease;
+}
+
+.fact-section.moved-down {
+    transform: translateY(30px);
+}
+
+.fun-facts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.fun-fact {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Page Specific Styling
+#kyf-page {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+*/
+

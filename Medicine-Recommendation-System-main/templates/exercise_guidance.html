@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise Guidance</title>
+    <link rel="stylesheet" href="../static/styles/exercise_guide.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../static/styles/navstyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <div id="exercise-guide-page" class="container">
+        <h2 class="heading">Exercise Guidance for Different Age Groups</h2>
+
+        <!-- Under 5 Years -->
+        <div class="age-group-card">
+            <h3 data-bs-toggle="collapse" data-bs-target="#under-five">Under 5 Years</h3>
+            <div id="under-five" class="collapse">
+                <div class="exercise-item">
+                    <img src="https://example.com/crawling.jpg" alt="Crawling Exercise" class="exercise-image">
+                    <h4>Crawling</h4>
+                    <p>Encourage your child to crawl on hands and knees. This exercise improves coordination and strengthens muscles.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/animal_walks.jpg" alt="Animal Walks Exercise" class="exercise-image">
+                    <h4>Animal Walks</h4>
+                    <p>Let your child mimic animal movements like walking like a bear or hopping like a frog. This is a fun way to develop motor skills.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-12 Years -->
+        <div class="age-group-card">
+            <h3 data-bs-toggle="collapse" data-bs-target="#five-to-twelve">5-12 Years</h3>
+            <div id="five-to-twelve" class="collapse">
+                <div class="exercise-item">
+                    <img src="https://example.com/jumping_jacks.jpg" alt="Jumping Jacks Exercise" class="exercise-image">
+                    <h4>Jumping Jacks</h4>
+                    <p>Have your child jump with arms and legs spread wide, then jump back to a resting position. It boosts heart rate and endurance.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/balancing_leg.jpg" alt="Balancing on One Leg Exercise" class="exercise-image">
+                    <h4>Balancing on One Leg</h4>
+                    <p>Get your child to balance on one leg for 10-20 seconds. This exercise helps with balance and focus.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/sit_to_stand.jpg" alt="Sit to Stand Exercise" class="exercise-image">
+                    <h4>Sit to Stand</h4>
+                    <p>Teach your child to sit and stand up without using hands. This improves leg strength and coordination.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 13-19 Years -->
+        <div class="age-group-card">
+            <h3 data-bs-toggle="collapse" data-bs-target="#thirteen-to-nineteen">13-19 Years</h3>
+            <div id="thirteen-to-nineteen" class="collapse">
+                <div class="exercise-item">
+                    <img src="https://example.com/bodyweight_squat.jpg" alt="Bodyweight Squat Exercise" class="exercise-image">
+                    <h4>Bodyweight Squat</h4>
+                    <p>Stand with feet shoulder-width apart, squat down, and then return to standing. This strengthens legs and core.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/push_up.jpg" alt="Push Up Exercise" class="exercise-image">
+                    <h4>Push-Ups</h4>
+                    <p>Start in a plank position, lower your chest to the ground, and push back up. This exercise strengthens the chest and arms.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/plank.jpg" alt="Plank Exercise" class="exercise-image">
+                    <h4>Plank</h4>
+                    <p>Hold a push-up position with your arms straight and body aligned. This targets the core, arms, and back.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 40-59 Years -->
+        <div class="age-group-card">
+            <h3 data-bs-toggle="collapse" data-bs-target="#forty-to-fifty-nine">40-59 Years</h3>
+            <div id="forty-to-fifty-nine" class="collapse">
+                <div class="exercise-item">
+                    <img src="https://example.com/brisk_walking.jpg" alt="Brisk Walking Exercise" class="exercise-image">
+                    <h4>Brisk Walking</h4>
+                    <p>Walk briskly for 30 minutes, aiming for a pace that raises the heart rate. This is great for cardiovascular health.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/yoga.jpg" alt="Yoga Exercise" class="exercise-image">
+                    <h4>Yoga</h4>
+                    <p>Practice gentle yoga poses like child's pose or downward dog. Yoga improves flexibility and reduces stress.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/dumbbell_exercises.jpg" alt="Dumbbell Exercises" class="exercise-image">
+                    <h4>Dumbbell Exercises</h4>
+                    <p>Perform light dumbbell exercises like bicep curls and shoulder presses. This helps with strength and muscle tone.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 60+ Years -->
+        <div class="age-group-card">
+            <h3 data-bs-toggle="collapse" data-bs-target="#sixty-plus">60+ Years</h3>
+            <div id="sixty-plus" class="collapse">
+                <div class="exercise-item">
+                    <img src="https://example.com/walking.jpg" alt="Walking Exercise" class="exercise-image">
+                    <h4>Walking</h4>
+                    <p>Take regular walks to maintain mobility and improve cardiovascular health. Walking is low-impact and accessible for seniors.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/stretching.jpg" alt="Stretching Exercise" class="exercise-image">
+                    <h4>Stretching</h4>
+                    <p>Do gentle stretches for flexibility, such as neck and shoulder stretches. Stretching reduces stiffness and improves joint health.</p>
+                </div>
+                <div class="exercise-item">
+                    <img src="https://example.com/light_yoga.jpg" alt="Light Yoga Exercise" class="exercise-image">
+                    <h4>Light Yoga</h4>
+                    <p>Practice simple yoga poses that promote flexibility and relaxation. This improves balance and reduces stress.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Bootstrap Collapse functionality
+            $('[data-bs-toggle="collapse"]').click(function() {
+                $(this).next('.collapse').collapse('toggle');
+            });
+        });
+    </script>
+</body>
+</html>
